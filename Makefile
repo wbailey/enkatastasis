@@ -1,7 +1,7 @@
 VIM = ${HOME}/.vim/bundle
 VPATH = $(VIM):.
 
-install: Vundle.vim vimrc ir_black swap
+install: Vundle.vim .vimrc ir_black swap
 
 Vundle.vim:
 	git clone https://github.com/gmarik/Vundle.vim.git $(VIM)/$@
