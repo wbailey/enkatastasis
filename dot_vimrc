@@ -48,6 +48,7 @@ au BufRead,BufNewFile {COMMIT_EDITMSG}                                set ft=git
 
 if has("gui_running")
   set guioptions-=T
+  set guifont=Menlo\ Regular:h13
 endif
 
 set rtp+=~/.vim/bundle/Vundle.vim

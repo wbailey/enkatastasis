@@ -1,15 +1,14 @@
 VIM = ${HOME}/.vim/bundle
 VPATH = $(VIM):.
-SRC = dot_vimrc
-DEST = .vimrc
+DOT_VIMRC=.vimrc
 
-install: Vundle.vim vimrc ir_black swap
+install: Vundle.vim dot_vimrc ir_black swap
 
 Vundle.vim:
 	git clone https://github.com/gmarik/Vundle.vim.git $(VIM)/$@
 
-vimrc:
-	cp .${SRC} ${HOME}/.${DEST}
+dot_vimrc:
+	cp $@ ${HOME}/${DOT_VIMRC}
 
 ir_black:
 	git clone git@github.com:twerth/ir_black.git 
