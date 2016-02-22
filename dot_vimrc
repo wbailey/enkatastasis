@@ -72,11 +72,14 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-commentary'
 Plugin 'fatih/vim-go'
+Plugin 'ngmy/vim-rubocop'
 
 call vundle#end()
 
 set rtp+=~/work/bin/src/github.com/golang/lint/misc/vim
 autocmd BufWritePost,FileWritePost *.go execute 'GoLint' | cwindow
+
+autocmd BufWritePost,FileWritePost *.rb execute 'RuboCop' | cwindow
 
 filetype plugin indent on
 
