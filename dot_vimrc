@@ -75,6 +75,9 @@ Plugin 'fatih/vim-go'
 
 call vundle#end()
 
+set rtp+=~/work/bin/src/github.com/golang/lint/misc/vim
+autocmd BufWritePost,FileWritePost *.go execute 'GoLint' | cwindow
+
 filetype plugin indent on
 
 " NerdTree
